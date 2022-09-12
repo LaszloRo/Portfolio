@@ -16,6 +16,12 @@ $(document).ready(function(){
         $('.skills #icon-x-skill').toggleClass('on');
         $('.skills .skill-container').toggleClass('off');
     });
+    $('#click-skills').click(function() {
+        $('.skill-box').toggleClass('on');
+    });
+    $('.skills #icon-x-skill').click(function() {
+        $('.skill-box.on').removeClass('on');
+    });
     // fare funzione apparire skills
     //fare funzione apparire soft 
     //fare funzione apparire tools
