@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapics.com/css2?family=poppins:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    transition: all .2s linear;
+    border: none; outline: none;
+}
+
+:root{
+    --white:#fff;
+    --black:#111;
+    --yellow:#f9ca24;
+    --light-gray:#c7d6d5;
+    --bg-color:#333;
+    --bg-card:#444;
+    --light-white:#eee;
+    --linear: linear-gradient(coral,blueviolet);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+}
+
+body {
+    background: var(--black);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background: var(--bg-color);
+    color: var(--light-gray);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover {
+    color: var(--yellow);
+}
+
+.heading {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .2rem solid #fff4;
+    color: var(--light-white);
+}
+
+.heading span {
+    color: var(--yellow);
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background:#1a1a1a;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .icon-header img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .4rem solid var(--yellow);
+}
+
+header .icon-header .name{
+    font-size: 3rem;
+    color: var(--light-gray);
+    padding: 1rem;
+}
+header .icon-header .post{
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 4.5rem;
+}
+header .navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .navbar ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 1rem 3rem;
+    gap: 2rem;
+}
+header .navbar ul li a {
+    position: relative;
+    font-size: 3rem;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: .5px rgba(255,255,255,0.5);
+}
+
+header .navbar ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--col);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 6px solid var(--col);
+    -webkit-text-stroke: .5px var(--col);
+}
+
+header .navbar ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--col));
+}
+
+#menu{
+    position: fixed;
+    top:2rem; right: 2rem;
+    background: var(--bg-color);
+    color: var(--light-gray);
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.8rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+header .theme-toggler {
+    border-radius: 1rem;
+    backdrop-filter: blur(.4rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4rem;
+    width: 30rem;
+}
+
+header .icon-container i {
+    font-size: 3rem;
+    color: var(--light-white);
+    cursor: pointer;
+    margin: 2rem;
+    width: 3rem;
+    padding-top: 2rem;
+}
+header .icon-container i:hover {
+    color: var(--yellow);
+}
+
+header .fa-solid.fa-palette.icon-rotate {
+    transform: rotateY(360deg);
+    transition: .8s linear;
+}
+
+header .theme-toggler span {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin:1rem;
+    box-shadow: 0 0 0 .5rem rgba(255,255,255,0.2),
+                0 1rem 2rem rgba(0,0,0,.4);
+    display: none;
+}
+header .theme-toggler span.themeon {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin:1rem;
+    box-shadow: 0 0 0 .5rem rgba(255,255,255,0.2),
+                0 1rem 2rem rgba(0,0,0,.4);
+}
+
+header .theme-toggler span:hover {
+    box-shadow: 0 0 0 .5rem var(--yellow),
+                0 1rem 2rem rgba(0,0,0,.4);
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3 {
+    font-size: 2.5rem;
+    color: var(--light-gray);
+}
+
+.home h1 {
+    font-size: 3.5rem;
+    color: var(--light-gray);
+}
+
+.home h1 span {
+   color: var(--yellow);
+}
+
+.home p {
+    font-size: 2rem;
+    color: var(--light-white);
+    padding: 1rem 0;
+}
+
+.home a {
+    text-align: center;
+}
+
+.about .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info {
+    flex: 1 1 48rem;
+    padding: 3rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3 {
+    font-size: 2rem;
+    color: var(--light-gray);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.about .row .info h3 span {
+    font-size: 2.4rem;
+    color: var(--yellow);
+}
+/* da togliere display*/
+.skills .skill-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 18rem;
+    padding: 6rem;
+    transform: skewY(-7deg);
+    transition: 1s;
+    
+    
+}
+.skills .skill-container .card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transition: .5s;
+    background: var(--bg-color);
+}
+.skills .skill-container .card:before{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: var(--bg-card);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+.skills .skill-container .card:after{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 15px;
+    height: 50%;
+    background: var(--bg-card);
+    transform-origin: left;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    border-bottom: 150px solid var(--bg-card);
+}
+.skills .skill-container .card:hover {
+    transform: translateY(-40px);
+}
+.skills .skill-container .card .icon-box {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.skills .skill-container .card:hover .icon-box i{
+    color: var(--yellow);
+    transition: .5s;
+}
+.skills .skill-container .card .icon-box i {
+    font-size: 4rem;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+.skills .skill-container .card .icon-box h3 {
+    font-size: 2rem;
+    color: var(--yellow);
+    position: relative;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+.skills .skill-container .card .content {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    font-size: 1.3rem;
+    color: var(--light-white);
+    padding: 1rem;
+    text-align: center;
+}
+.skills .skill-container .card .content:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 100%;
+    height: 100px;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: none;
+    pointer-events: none;
+    z-index: -1;
+}
+.skills .skill-container .card:hover .content:before {
+    transform: translateY(40px) skewX(45deg);
+    background: linear-gradient(transparent,transparent,rgba(0,0,0.1));
+    filter: blur(5px);
+    opacity: .5;
+}
+/*da mettere display none*/
+.skills #icon-x-skill {
+    color: var(--light-white);
+    margin-top: 4rem;
+    font-size: 4rem;
+    margin-left: 5rem;
+    display: none;
+    
+}
+.skills #icon-x-skill:hover {
+    color: var(--yellow);
+}
+.skills #icon-x-skill.on {
+    display: block;
+}
+
+.skills .skill-container.off {
+    right: -5000px;
+    transform: rotateY(180deg);
+}
+/* inizio sezione skills card*/
+
+.skill-box {
+    margin-top: 5rem;
+    display: none;
+}
+.skill-box #titoloskill {
+    text-align: center;
+    color: var(--light-gray);
+    margin-bottom: 5rem;
+    font-size: 3rem;
+}
+.skill-box .container {
+    display: flex;
+    grid-template-columns: 360px 320px;
+    column-gap: 3rem;
+    justify-content: center;
+    background: var(--bg-color);
+    padding: 5rem;
+    margin: 7rem;
+    border-radius: 1rem;
+}
+.skill-box .container .tabs {
+    padding-right: 5rem;
+}
+.skill-box .container .header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.skill-box .container .header:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+.skill-box .container .header .icon,
+.skill-box .container .header .arrow {
+    font-size: 2rem;
+    color: var(--yellow);
+}
+.skill-box .container .header .icon {
+    margin-right: 1rem;
+}
+.skill-box .container .header .arrow {
+    margin-left: auto;
+    padding-left: 2rem;
+}
+.skill-box .container .skill-active .arrow {
+    transform: rotate(-90deg);
+    transition: .3s;
+}
+.skills [data-content] {
+    display: none;
+}
+.skill-box .skill-active[data-content] {
+    display: block;
+}
+.skill-box .container .header .title {
+    font-size: 2.5rem;
+    color: var(--light-gray);
+    font-weight: 400;
+}
+.skill-box .container .header .subtitle {
+    font-size: 1.2rem;
+    color: var(--light-white);
+    margin-left: .7rem;
+}
+.skill-box .container .content .skill-list {
+    row-gap: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+.skill-box .container .content .skill-list .data {
+    width: 300px;
+}
+.skill-box .container .content .titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+.skill-box .container .content .titles .name {
+    font-size: 1.5rem;
+    color: var(--light-gray);
+    font-weight: 400;
+}
+.skill-box .container .content .titles .number {
+    margin-left: 5rem;
+    color: var(--light-white);
+    font-size: 1.8rem;
+}
+.skill-box .container .content .bar,
+.skill-box .container .content .percent {
+    height: 5px;
+    border-radius: .25rem;
+}
+.skill-box .container .content .bar {
+    background-color: var(--bg-card);
+}
+.skill-box .container .content .percent {
+    display: block;
+    background-color: var(--yellow);
+}
+/* fine*/
+
+
+
+
+
+.works .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+    margin-top: 5rem;
+}
+.works .container.workon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+    margin-top: 5rem;
+    display: none;
+}
+
+.works #icon-x {
+    color: var(--light-white);
+    font-size: 3rem;
+    padding: .7rem 1rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+.works .fas.fa-times.icon_rotate{
+    transform: rotate(180deg);
+}
+
+.works #icon-x:hover {
+    color: var(--yellow);
+}
+ 
+.works .container .box {
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid var(--yellow);
+    position: relative;
+}
+
+.works .container .box span {
+    font-size: 1.6rem;
+    background: var(--bg-color);
+    color: var(--light-gray);
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.works .container .box h3 {
+    font-size: 2.2rem;
+    color: var(--light-white);
+    padding-top: 1.5rem;
+}
+
+.works .container .box p {
+    font-size: 1.7rem;
+    color: var(--light-gray);
+    padding: 1rem 0;
+}
+
+.works .container .box i {
+    position: absolute;
+    top: -1.5rem; left: -2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+    background: var(--yellow);
+}
+
+.contact .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .container .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .container form {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .container form .box {
+    padding: 1.3rem;
+    margin: 1.2rem 0;
+    background: #333;
+    color: var(--light-gray);
+    text-transform: none;
+    font-size: 1.7rem;
+    border-radius: .7rem;
+    width: 100%;
+}
+
+.contact .container form .message {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .container form .box:focus {
+    border: .15rem solid var(--yellow);
+    transition: none;
+}
+
+.contact .container .content .title {
+    text-transform: uppercase;
+    color: var(--light-white);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.contact .container .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--light-white);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .container .content .info h3 i {
+    padding-right: 1rem;
+    color: var(--yellow);
+}
+
+.contact .container .content .info h3 a {
+    color: var(--light-white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1920px) {
+    .skills .skill-container {
+        justify-content: space-around;
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px) {
+    header {
+        left: -120%;
+    }
+
+    #menu {
+        display: block;
+    }
+    header.toggle {
+        left:0%;
+    }
+    body {
+        padding: 0;
+    }
+}
+
+@media (max-width:768px) {
+    html{
+        font-size: 50%;
+    }
+    .skills .skill-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+    }
+    .skills .skill-container .card {
+        margin-top: 3.5rem;
+    }
+    .skills .skill-container .card:hover {
+        transform: translateX(40px);
+    }
+}
+
+@media (max-width:400px) {
+    header {
+        width: 100vw;
+    }
+    .works .container .box {
+        width: 100%;
+    }
+}
+    
