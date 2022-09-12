@@ -1,5 +1,5 @@
 # Portfolio
-My personal portfolio
+
 ![alt text](https://github.com/LaszloRo/Portfolio/blob/main/Screenshot/Home.PNG)
 ## Introduzione
 Portfolio online personale, progetto creato con:
