@@ -288,7 +288,7 @@ header .theme-toggler span:hover {
     padding: 6rem;
     transform: skewY(-7deg);
     transition: 1s;
-    display: none;
+    
 }
 
 .skills .skill-container .card {
@@ -385,7 +385,6 @@ header .theme-toggler span:hover {
     font-size: 4rem;
     margin-left: 5rem;
     display: none;
-    
 }
 .skills #icon-x-skill:hover {
     color: var(--yellow);
@@ -506,7 +505,7 @@ header .theme-toggler span:hover {
 /* inserire display none*/
 .soft-box {
     margin-top: 5rem;
-    
+    display: none;
 }
 .soft-box.on {
     display: block;
@@ -785,14 +784,34 @@ header .theme-toggler span:hover {
     .soft-box .container .content{
        width: 400px;
     }
-}
-
-@media (max-width:400px) {
+    .skill-box .container .tabs{
+        padding-left: 4rem;
+    }
+    .skill-box .container .content {
+        padding-right: 4rem;
+    }
+} 
+/* inserire qui in 400px nuova pagina skill box fatto ad elenco*/
+@media (max-width:420px) {
     header {
         width: 100vw;
     }
     .works .container .box {
         width: 100%;
+    }
+    .skills .skill-container {
+        width: 100%;
+    }
+    .soft-box .container .content{
+        width: 280px;
+    }
+    .soft-box .container .content:hover {
+        transform: translateX(20px);
+        transition: all .2s linear;
+        border: 1px solid var(--yellow);
+    }
+    .skill-box.on {
+        display: none;
     }
 }
     

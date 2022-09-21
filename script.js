@@ -19,8 +19,16 @@ $(document).ready(function(){
     $('#click-skills').click(function() {
         $('.skill-box').toggleClass('on');
     });
+    $('#click-soft').click(function(){
+        $('.soft-box').toggleClass('on');
+    });
+    $('#click-tool').click(function(){
+        $('.tools-box').toggleClass('on');
+    });
     $('.skills #icon-x-skill').click(function() {
         $('.skill-box.on').removeClass('on');
+        $('.soft-box.on').removeClass('on');
+        $('.tools-box').removeClass('on');
     });
     // fare funzione apparire skills
     //fare funzione apparire soft 
