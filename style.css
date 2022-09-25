@@ -172,6 +172,7 @@ header .theme-toggler {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin: 4rem;
     width: 30rem;
 }
@@ -236,7 +237,7 @@ header .theme-toggler span:hover {
     top: 100px;
     left: 50%;
     margin: 0;
-    padding: 0 20px;
+   
     color: var(--white);
     text-shadow: 0 0 20px var(--yellow);
 }
@@ -245,7 +246,7 @@ header .theme-toggler span:hover {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 20px;
+    
     z-index: -1;
     color: var(--yellow);
     filter: blur(15px);
@@ -813,7 +814,7 @@ header .theme-toggler span:hover {
     }
     .home .neon-title {
         top: 20%;
-        left: 40%;
+        left: 30%;
     }
 } 
 /* inserire qui in 400px nuova pagina skill box fatto ad elenco*/
@@ -839,8 +840,10 @@ header .theme-toggler span:hover {
         display: none;
     }
     .home .neon-title {
-        left: 55px;
-        text-align: center;
+        left: 30%;
+    }
+    header .theme-toggler {
+       margin-left: 10rem;
     }
 }
     
