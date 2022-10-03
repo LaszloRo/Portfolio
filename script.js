@@ -30,6 +30,7 @@ $(document).ready(function(){
         $('.soft-box.on').removeClass('on');
         $('.tools-box').removeClass('on');
     });
+   
     // fare funzione apparire skills
     //fare funzione apparire soft 
     //fare funzione apparire tools
