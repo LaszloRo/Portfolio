@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapics.com/css2?family=poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -18,12 +19,14 @@
     --bg-card:#444;
     --light-white:#eee;
     --linear: linear-gradient(coral,blueviolet);
+    --start-inear: linear-gradient(90deg,#f9d976,#f39f86);
     --tools-card-bg: rgba(51,51,51, 0.9);
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar{
@@ -49,6 +52,66 @@ section{
     min-height: 100vh;
     padding: 1rem;
 }
+
+/*  inizio sipario */
+.container-1 {
+    height: 100vh;
+    width: 100%;
+    right: 0;
+    display: flex;
+    background: #111;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    z-index: 2;
+}
+.container-1.off  {
+    animation: moveanimation 1.5s linear 0.4s;
+    animation-fill-mode: both;
+}
+.container-1 .content-1 {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-1 .content-1 .title-init {
+    font-size: 5rem;
+    padding: 2rem;
+    background: linear-gradient(90deg,#f9d976,#f39f86);
+    font-family: 'Peralta', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container-1 .content-1 .title-sub {
+    background: var(--linear);
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container-1 .content-1 .btn-init {
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    background: var(--light-white);
+    text-decoration: none;
+    color: var(--black);
+}
+
+.container-1 .content-1 .btn-init:hover{
+    background: linear-gradient(90deg,#f9d976,#f39f86);
+    transition: all .5s linear;
+}
+@keyframes moveanimation {
+    from { top:0px; }
+    to {top:-1000px; }
+ }
+
+ /* fine sipario*/
+
 
 .btn{
     padding: .7rem 3rem;
@@ -84,7 +147,7 @@ section{
 
 header {
     position: fixed;
-    top: 0; left: 0;
+    top: 0; left: -1000px;
     z-index: 1000;
     height: 100%;
     width: 35rem;
@@ -93,6 +156,14 @@ header {
     justify-content: center;
     flex-flow: column;
     text-align: center;
+}
+header.on {
+    animation: initHeader 2s linear 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes initHeader {
+    from{left: -1000px}
+    to {left: 0;}
 }
 
 header .icon-header img{
@@ -290,7 +361,12 @@ header .theme-toggler span:hover {
     padding: 3rem 1rem;
     padding-left: 6rem;
 }
-
+.about .row .info .title {
+    color: var(--light-gray);
+    font-size: 3rem;
+    padding-left: 8rem;
+    margin-bottom: 2.5rem;
+}
 .about .row .info h3 {
     font-size: 2rem;
     color: var(--light-gray);
@@ -643,11 +719,13 @@ header .theme-toggler span:hover {
     
 }
 .tools-box .box-parent .box-rotate .title {
-    color: var(--light-white);
+    background: var(--start-inear);
     position: relative;
     top: -150px;
     pointer-events: none;
-    font-size: 3rem;
+    font-size: 2.8rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .tools-box .box-rotate .card .content {
     padding: 1.2rem;
@@ -803,7 +881,6 @@ header .theme-toggler span:hover {
     flex: 1 1 45rem;
     padding: 2rem;
     margin: 2rem;
-    margin-bottom: 4rem;
 }
 
 .contact .container form .box {

@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    //funzione sipario
+    $('.container-1 .content-1 .btn-init').click(function() {
+        $('.container-1').toggleClass('off');
+        $('header').toggleClass('on');
+    });
     $('#menu').click(function(){
         $(this).toggleClass('fa-times');
         $('header').toggleClass('toggle');
