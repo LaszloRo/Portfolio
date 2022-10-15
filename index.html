@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laszlo Rozsnyai</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
@@ -102,7 +103,7 @@
             <div class="card">
                 <div class="icon-box">
                     <i class="fa-solid fa-code" id="click-skills" title="Click per aprire le skills"></i>
-                    <h3 id="click-skills" title="Click per aprire le skills">Skills</h3>
+                    <h3 title="Click per aprire le skills">Skills</h3>
                 </div>
                 <div class="content">
                     <p>Clicca sull'icona per conoscere le mie abilità tecniche nella programmazione</p>
@@ -111,7 +112,7 @@
             <div class="card">
                 <div class="icon-box">
                     <i class="fa-regular fa-user" id="click-soft" title="Click per aprire le soft-skill"></i>
-                    <h3 id="click-soft" title="Click per aprire le soft-skill">Soft Skills</h3>
+                    <h3 title="Click per aprire le soft-skill">Soft Skills</h3>
                 </div>
                 <div class="content">
                     <p>Clicca sull'icona per conoscere le mie capacità di team working </p>
@@ -120,7 +121,7 @@
             <div class="card">
                 <div class="icon-box">
                     <i class="fa-solid fa-screwdriver-wrench" id="click-tool" title="Click per aprire le tools"></i>
-                    <h3 id="click-tool" title="Click per aprire le tools">Tools/Software</h3>
+                    <h3 title="Click per aprire le tools">Tools/Software</h3>
                 </div>
                 <div class="content">
                     <p>Clicca sull'icona per conoscere i principali tools che uso quotidianamente</p>
@@ -138,7 +139,7 @@
                         <i class="fa-solid fa-code icon"></i>
 
                         <div>
-                            <h1 class="title">Programmazione</h1>
+                            <h1 class="title" >Programmazione</h1>
                             <span class="subtitle">Click per visualizzare</span>
 
                         </div>
@@ -367,42 +368,63 @@
     <section class="works" id="works">
         <h1 class="heading">My <span> Works</span></h1>
         <i class="fas fa-times" id="icon-x"></i>
-        <div class="container">
-            <div class="box">
-                <i class="fa-sharp fa-solid fa-briefcase"></i>
-                <span>10/2021-now</span>
-                <h3>Amazon Sort center</h3>
-                <p>Operaio Settore Logistica e trasporti presso il centro di smistamento amazon blq8 di spilamberto(MO)</p>
+        
+        <div class="accordion-box-1">
+            <div class="accordion">
+                <div class="contentbox" id="box-1">
+                    <div class="label">List One</div>
+                    <div class="content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatem. Adipisci placeat, soluta odio itaque eum sint veritatis exercitationem sunt ea consequuntur eveniet nulla suscipit voluptate veniam dolor consequatur vero?</p>
+                    </div>
+                </div>
+                <div class="contentbox" id="box-2">
+                    <div class="label">List twin</div>
+                    <div class="content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatem. Adipisci placeat, soluta odio itaque eum sint veritatis exercitationem sunt ea consequuntur eveniet nulla suscipit voluptate veniam dolor consequatur vero?</p>
+                    </div>
+                </div>
+                <div class="contentbox" id="box-3">
+                    <div class="label">List three</div>
+                    <div class="content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatem. Adipisci placeat, soluta odio itaque eum sint veritatis exercitationem sunt ea consequuntur eveniet nulla suscipit voluptate veniam dolor consequatur vero?</p>
+                    </div>
+                </div>
+                <div class="contentbox" id="box-4">
+                    <div class="label">List four</div>
+                    <div class="content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatem. Adipisci placeat, soluta odio itaque eum sint veritatis exercitationem sunt ea consequuntur eveniet nulla suscipit voluptate veniam dolor consequatur vero?</p>
+                    </div>
+                </div>
             </div>
-            <div class="box">
-                <i class="fa-sharp fa-solid fa-briefcase"></i>
-                <span>10/2021-now</span>
-                <h3>Amazon</h3>
-                <p>Operaio Settore Logistica e trasporti presso il centro di smistamento amazon blq8 di spilamberto(MO)</p>
+        </div>
+
+        <div class="book-title">
+            <h1 class="animate__animated animate__backInLeft">Extra Programmazione</h1>
+            <h1 class="animate__animated animate__backInLeft">Programmazione</h1>
+        </div>
+        <div class="book-container">
+            <div class="book-card">
+                <div class="imgbox">
+                    <img src="/risorse/job-image-resize.jpg">
+                </div>
+                <div class="details">
+                    <h2>Lavori Generali</h2>
+                    <p> - Amazon Sort Center</p>
+                    <p> - Esselunga Magazzino</p>
+                    <p> - Corriere Amazon </p>
+                    <p> - Barman C&G</p>
+                    <i class="book-btn" id="extra-work">Leggi di piu</i>
+                </div>
             </div>
-            <div class="box">
-                <i class="fa-sharp fa-solid fa-briefcase"></i>
-                <span>10/2021-now</span>
-                <h3>Amazon</h3>
-                <p>Operaio Settore Logistica e trasporti presso il centro di smistamento amazon blq8 di spilamberto(MO)</p>
-            </div>
-            <div class="box">
-                <i class="fa-sharp fa-solid fa-briefcase"></i>
-                <span>10/2021-now</span>
-                <h3>Amazon</h3>
-                <p>Operaio Settore Logistica e trasporti presso il centro di smistamento amazon blq8 di spilamberto(MO)</p>
-            </div>
-            <div class="box">
-                <i class="fa-sharp fa-solid fa-briefcase"></i>
-                <span>10/2021-now</span>
-                <h3>Amazon</h3>
-                <p>Operaio Settore Logistica e trasporti presso il centro di smistamento amazon blq8 di spilamberto(MO)</p>
-            </div>
-            <div class="box">
-                <i class="fa-sharp fa-solid fa-briefcase"></i>
-                <span>10/2021-now</span>
-                <h3>Amazon</h3>
-                <p>Operaio Settore Logistica e trasporti presso il centro di smistamento amazon blq8 di spilamberto(MO)</p>
+            <div class="book-card">
+                <div class="imgbox">
+                    <img src="/risorse/shutterstock_1449924503.png">
+                </div>
+                <div class="details">
+                    <h2>Lavori Informatici</h2>
+                    <p> - Aitho Consulente Informatico</p>
+                    <p class="book-btn">Leggi di piu</p>
+                </div>
             </div>
         </div>
     </section>

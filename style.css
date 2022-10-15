@@ -309,7 +309,6 @@ header .theme-toggler span:hover {
     top: 100px;
     left: 50%;
     margin: 0;
-   
     color: var(--white);
     text-shadow: 0 0 20px var(--yellow);
 }
@@ -318,7 +317,6 @@ header .theme-toggler span:hover {
     position: absolute;
     top: 0;
     left: 0;
-    
     z-index: -1;
     color: var(--yellow);
     filter: blur(15px);
@@ -346,6 +344,7 @@ header .theme-toggler span:hover {
 
 .home a {
     text-align: center;
+    padding: 2rem;
 }
 
 .about .row {
@@ -387,6 +386,9 @@ header .theme-toggler span:hover {
     padding: 6rem;
     transform: skewY(-7deg);
     transition: 1s;
+}
+.skills .skill-container.off {
+    display: none;
 }
 
 .skills .skill-container .card {
@@ -491,9 +493,6 @@ header .theme-toggler span:hover {
     display: block;
 }
 
-.skills .skill-container.off {
-    display: none;
-}
 /* inizio sezione skills card*/
 
 .skill-box {
@@ -786,10 +785,10 @@ header .theme-toggler span:hover {
 
 
 
-
+                                    /* inizio Work */
 
 .works .container{
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -863,6 +862,219 @@ header .theme-toggler span:hover {
     color: var(--black);
     background: var(--yellow);
 }
+
+
+/*                              fine sezione work   */
+/*                               inizio nuovo work   */
+
+.works #icon-x {
+    display: none;
+}
+.works #icon-x.on {
+    display: block;
+    position: relative;
+    left: 20px;
+}
+.works .accordion-box-1 {
+    display: none;
+}
+.works .accordion-box-1.on {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+.accordion {
+    max-width: 600px;
+}
+
+.accordion .contentbox {
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion #box-1 {
+    left:2000px;
+    animation: labelAnimationLeft 2s ease-out ;
+    animation-fill-mode:forwards;
+}
+.accordion #box-2 {
+    right: 2000px;
+    animation: labelAnimationRight 2s ease-out 1s;
+    animation-fill-mode:forwards;
+}
+.accordion #box-3 {
+    left:2000px;
+    animation: labelAnimationLeft 2s ease-out 2s;
+    animation-fill-mode:forwards;
+}
+.accordion #box-4 {
+    right: 2000px;
+    animation: labelAnimationRight 2s ease-out 3s;
+    animation-fill-mode:forwards;
+}
+@keyframes labelAnimationLeft {
+    from { left: 2000px;transform: rotateY(960deg);}
+    to {left: 0px;}
+}
+@keyframes labelAnimationRight {
+    from { right: 2000px;transform: rotateY(960deg);}
+    to {right: 0px;}
+}
+.accordion .contentbox .label {
+    position: relative;
+    padding: 1rem;
+    background: var(--bg-color);
+    color: var(--light-gray);
+    cursor: pointer;
+    font-size: 2rem;
+}
+.accordion .contentbox .label:hover {
+    color: var(--yellow);
+}
+.accordion .contentbox .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2.2rem;
+}
+.accordion .contentbox .content {
+    position: relative;
+    background: rgba(119,119,119,0.5);
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+.accordion .contentbox.active .label::before {
+    content: '-';
+}
+.accordion .contentbox.active .content {
+    height: 150px;
+    padding: .8rem;
+}
+.accordion .contentbox .content p {
+    font-size: 1.8rem;
+    color: var(--light-white);
+    padding: 2rem;
+}
+
+
+.book-title {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8rem;
+    margin-right: 12rem;
+    margin-bottom: -4rem;
+    margin-top: 5rem;
+}
+.book-title.off {
+    display: none;
+}
+.book-title h1 {
+    font-size: 3rem;
+    color: var(--light-gray);
+}
+.book-container {
+    max-width: 1000px;
+    margin: 10rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.book-container.off {
+    display: none;
+}
+
+.book-container .book-card {
+    position: relative;
+    margin: 20px 0;
+    width: 290px;
+    height: 360px;
+    background: var(--bg-card);
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(255,255,255,0.2);
+}
+.book-container .book-card:hover {
+    z-index: 1000;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 15px 0 50px rgba(255,255,255,0.2);
+}
+
+.book-container .book-card:hover .imgbox {
+    transform: rotateY(-135deg);
+}
+
+.book-container .book-card .imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--light-white);
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+
+.book-card .imgbox img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit:cover;
+}
+
+.book-card .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    gap: 1rem;
+    margin-left: 3.2rem;
+    margin-right: 1rem;
+}
+
+.book-card .details h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: var(--yellow);
+    margin-top: 1.3rem;
+}
+
+.book-card .details p {
+    color: var(--light-white);   
+    font-size: 2rem;
+    text-align: center;
+}
+
+.book-card .details .book-btn {
+    text-decoration: none;
+    color: #eee;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    width: 55%;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: .8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.book-card .details .book-btn:hover {
+    border-color: yellow;
+    transition: all 1.5s;
+}
+
+/*                               fine nuovo work   */
+
 
 .contact .container {
     display: flex;
@@ -964,14 +1176,15 @@ header .theme-toggler span:hover {
 
 @media (max-width:991px) {
     header {
-        left: -120%;
+        display: none;
     }
 
     #menu {
         display: block;
     }
     header.toggle {
-        left:0%;
+        display: block;
+        transition: 0s;
     }
     body {
         padding: 0;
