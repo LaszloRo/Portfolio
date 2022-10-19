@@ -3,6 +3,21 @@ $(document).ready(function(){
     $('.container-1 .content-1 .btn-init').click(function() {
         $('.container-1').toggleClass('off');
         $('header').toggleClass('on');
+        window.setTimeout(function(){
+            $('.home .home-h3').toggleClass('on');
+        },2000);
+        window.setTimeout(function(){
+            $('.home .home-h1').toggleClass('on');
+        },2700);
+        window.setTimeout(function(){
+            $('.home .home-h1 .home-span').toggleClass('on');
+        },3000);
+        window.setTimeout(function(){
+            $('.home .home-p').toggleClass('on');
+        },4200);
+        window.setTimeout(function(){
+            $('.home a').toggleClass('on');
+        },5000);
     });
     $('#menu').click(function(){
         $(this).toggleClass('fa-times');
@@ -57,9 +72,21 @@ $(document).ready(function(){
         $('.works #icon-x').toggleClass('on');
         $('.works .accordion-box-1').toggleClass('on');
     });
+    $('.works .book-container .book-card .details #prog-work').click(function(){
+        $('.book-title').toggleClass('off');
+        $('.book-container').toggleClass('animate__animated animate__backOutUp');
+        window.setTimeout(function(){
+            $('.book-container').toggleClass('off');
+        },750);
+        $('.works #icon-x').toggleClass('on');
+        $('.works .accordion-box-2').toggleClass('on');
+    });
     $('.works #icon-x').click(function() {
         $('.works #icon-x.on').removeClass('on');
         $('.works .accordion-box-1.on').removeClass('on');
+        if($('.works .accordion-box-2.on')) {
+            $('.works .accordion-box-2.on').removeClass('on');
+        };
         $('.book-title.off').removeClass('off');
         $('.book-container.off').removeClass('off');
         $('.book-container.animate__animated.animate__backOutUp').removeClass('animate__animated animate__backOutUp');
@@ -68,6 +95,7 @@ $(document).ready(function(){
             $('.book-container.animate__animated.animate__backInDown').removeClass('animate__animated animate__backInDown');
         },750);
     });
+   
     $(window).on('scroll load',function(){
         $('#menu').removeClass('fa-times');
         $('header').removeClass('toggle');

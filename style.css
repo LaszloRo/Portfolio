@@ -323,8 +323,22 @@ header .theme-toggler span:hover {
 }
 
 .home h3 {
+    position: relative;
     font-size: 2.5rem;
     color: var(--light-gray);
+}
+.home .home-h3,
+.home .home-h1,
+.home .home-h1 .home-span,
+.home .home-p {
+    display: none;
+}
+.home .home-h3.on,
+.home .home-h1.on,
+.home .home-h1 .home-span.on,
+.home .home-p.on {
+    display: flex;
+    gap: .8rem;
 }
 
 .home h1 {
@@ -343,22 +357,27 @@ header .theme-toggler span:hover {
 }
 
 .home a {
+    display: none;
+}
+.home a.on {
+    display: block;
     text-align: center;
     padding: 2rem;
 }
 
 .about .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 0;
 }
 
 .about .row .info {
-    flex: 1 1 48rem;
+    flex: 1 1 45rem;
     padding: 3rem 1rem;
     padding-left: 6rem;
+    border-right: 1px solid var(--bg-card);
 }
 .about .row .info .title {
     color: var(--light-gray);
@@ -376,6 +395,30 @@ header .theme-toggler span:hover {
     font-size: 2.4rem;
     color: var(--yellow);
 }
+.about .row .info-hobby {
+    flex: 1 1 45rem;
+    padding: 3rem 1rem;
+    padding-left: 6rem;
+}
+.about .row .info-hobby .hobby-title {
+    position: relative;
+    bottom: 45px;
+    color: var(--light-gray);
+    font-size: 3rem;
+    padding-left: 8rem;
+}
+.about .row .info-hobby .hobby-title span {
+    color: var(--yellow);
+}
+.about .row .info-hobby .hobbys {
+    gap: .5rem;
+    font-size: 2rem;
+    color: var(--light-gray);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+
 /* da togliere display*************************************/
 .skills .skill-container {
     position: relative;
@@ -495,6 +538,7 @@ header .theme-toggler span:hover {
 
 /* inizio sezione skills card*/
 
+/*                     inizio sezione programmazione skill */
 .skill-box {
     margin-top: 5rem;
     display: none;
@@ -563,9 +607,9 @@ header .theme-toggler span:hover {
     margin-left: .7rem;
 }
 .skill-box .container .content .skill-list {
-    row-gap: 1.8rem;
     display: flex;
     flex-direction: column;
+    row-gap: 1.8rem;
 }
 .skill-box .container .content .skill-list .data {
     width: 300px;
@@ -597,7 +641,7 @@ header .theme-toggler span:hover {
     display: block;
     background-color: var(--yellow);
 }
-/* fine*/
+                            /* fine sezione skills programmazione*/
                                 /* inizio soft box*/
 /* inserire display none*/
 .soft-box {
@@ -960,6 +1004,17 @@ header .theme-toggler span:hover {
     padding: 2rem;
 }
 
+.works .accordion-box-2 {
+    display: none;
+}
+
+.works .accordion-box-2.on {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+
 
 .book-title {
     display: flex;
@@ -1219,7 +1274,18 @@ header .theme-toggler span:hover {
         top: 20%;
         left: 30%;
     }
-} 
+    .about .row .info {
+        border-right: none;
+    }
+    .about .row .info-hobby {
+        margin-top: 3rem;
+    }
+    .about .row .info-hobby .hobby-title {
+        border-top: 1px solid var(--bg-card);
+        padding-top: 1rem;
+        width: 95%;
+    }
+}
 /* inserire qui in 400px nuova pagina skill box fatto ad elenco*/
 @media (max-width:420px) {
     header {
@@ -1249,4 +1315,3 @@ header .theme-toggler span:hover {
        margin-left: 10rem;
     }
 }
-    
