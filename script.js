@@ -41,13 +41,20 @@ $(document).ready(function(){
         //$('.skills .skill-container').toggleClass('off');
     });
     $('#click-skills').click(function() {
-        $('.skill-box').toggleClass('on');
+        window.setTimeout(function(){
+            $('.skill-box').toggleClass('on');
+        },750);
     });
     $('#click-soft').click(function(){
-        $('.soft-box').toggleClass('on');
+        window.setTimeout(function(){
+            $('.soft-box').toggleClass('on');
+        },750);
+       
     });
     $('#click-tool').click(function(){
-        $('.tools-box').toggleClass('on');
+        window.setTimeout(function(){
+            $('.tools-box').toggleClass('on');
+        },750);
     });
     $('.skills #icon-x-skill').click(function() {
         $('.skill-box.on').removeClass('on');

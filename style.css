@@ -417,6 +417,25 @@ header .theme-toggler span:hover {
     padding: 1rem 0;
     font-weight: normal;
 }
+.about .row .info-formazione {
+    flex: 1 1 45rem;
+    padding: 8rem 1rem;
+    padding-left: 6rem;
+}
+.about .row .info-formazione .formazione-title {
+    position: relative;
+    color: var(--light-gray);
+    font-size: 3rem;
+    bottom: 45px;
+    padding-left: 8rem;
+}
+.about .row .info-formazione .formazione{
+    gap: .5rem;
+    font-size: 2rem;
+    color: var(--light-gray);
+    padding: 1rem 0;
+    font-weight: normal;
+}
 
 
 /* da togliere display*************************************/
@@ -1281,6 +1300,11 @@ header .theme-toggler span:hover {
         margin-top: 3rem;
     }
     .about .row .info-hobby .hobby-title {
+        border-top: 1px solid var(--bg-card);
+        padding-top: 1rem;
+        width: 95%;
+    }
+    .about .row .info-formazione .formazione-title {
         border-top: 1px solid var(--bg-card);
         padding-top: 1rem;
         width: 95%;
