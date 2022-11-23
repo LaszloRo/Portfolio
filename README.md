@@ -12,6 +12,7 @@ Nella pagina troviamo animazioni create con CSS puro con piccoli feature combo c
 ![alt text](https://github.com/LaszloRo/Portfolio/blob/main/Screenshot/Skills2.PNG)
 Nella sezione "Skills" troveremo la scheda con le competenze di programmazione
 ![alt text](https://github.com/LaszloRo/Portfolio/blob/main/Screenshot/program-1.PNG)
+
 Nella sezione "Soft-skill" troveremo una scheda delle abilità personali
 ![alt text](https://github.com/LaszloRo/Portfolio/blob/main/Screenshot/soft-1.PNG)
 nella sezione "tools" troveremo un scheda con dei vari software con un effetto 3D che roteano 
